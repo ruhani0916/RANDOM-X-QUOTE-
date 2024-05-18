@@ -1,0 +1,27 @@
+code
+import random
+import time
+
+class FitnessTracker:
+    def _init_(self):
+        self.steps = 0
+        self.distance = 0.0
+        self.calories_burned = 0.0
+
+    def track_activity(self):
+        while True:
+            self.steps += random.randint(10, 50)
+            self.distance += random.uniform(0.1, 0.5)
+            self.calories_burned += random.uniform(5, 20)
+            self.display_stats()
+            time.sleep(5)  # Simulate tracking every 5 seconds
+
+    def display_stats(self):
+        print("Steps:", self.steps)
+        print("Distance (km):", round(self.distance, 2))
+        print("Calories burned:", round(self.calories_burned, 2))
+        print()
+
+if _name_ == "_main_":
+    tracker = FitnessTracker()
+    tracker.track_activity()

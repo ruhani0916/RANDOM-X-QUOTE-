@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            color: #ffb3ba;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #000;
+            box-shadow: 0 0 10px #000;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #ffb3ba;
+        }
+
+        p {
+            color: #ffb3ba;
+            line-height: 1.6;
+        }
+
+        #quote-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #quote {
+            font-size: 1.5em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffb3ba;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Motivational Blog</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Welcome to Our Motivational Corner</h2>
+            <p>Find daily doses of inspiration and motivation to kickstart your day. 
+                Our blog is dedicated to bringing you uplifting content that empowers 
+                and encourages you to achieve greatness. Scroll down for a motivational quote to brighten your day!</p>
+        </article>
+
+        <div id="quote-container">
+            <p id="quote">Click the button below to discover your daily dose of motivation.</p>
+            <button onclick="generateMotivationalQuote()">Get Inspired</button>
+        </div>
+    </main>
+
+    <script>
+        const motivationalQuotes = [
+            "Believe you can and you're halfway there. -Theodore Roosevelt",
+            "The only way to achieve the impossible is to believe it is possible. -Charles Kingsleigh",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. -Winston Churchill",
+            "Your time is limited, don't waste it living someone else's life. -Steve Jobs",
+            "The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt"
+            
+        ];
+
+        function generateMotivationalQuote() {
+            const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
+            const randomQuote = motivationalQuotes[randomIndex];
+            document.getElementById("quote").innerText = randomQuote;
+        }
+    </script>
+</body>
+</html>

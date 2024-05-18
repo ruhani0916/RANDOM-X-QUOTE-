@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Animation CSS</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="login-light"></div>
+    <div class="login-box">
+        <form action="generator new.html">
+            <input type="checkbox" class="input-check" id="input-check">
+            <label for="input-check" class="toggle">
+                <span class="text off">off</span>
+                <span class="text on">on</span>
+            </label>
+            <div class="light"></div>
+
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="new signup.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="navigation">
+        <button class="hamburger" onclick="show()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <script src="script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+       
+     function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var sidebarContent = document.getElementById('sidebarContent');
+            var mapContainer = document.getElementById('map-container');
+            var toggleSidebarButton = document.getElementById('toggleSidebarButton');
+            
+            if (sidebar.classList.contains('contracted')) {
+                
+                sidebar.classList.remove('contracted');
+                sidebarContent.classList.remove('hidden');
+                mapContainer.classList.remove('contracted');
+                toggleSidebarButton.textContent = 'Sidebar';
+            } else 
+                
+                sidebar.classList.add('contracted');
+                sidebarContent.classList.add('hidden');
+                mapContainer.classList.add('contracted');
+                toggleSidebarButton.textContent = 'Sidebar';
+            }
+    </script>
+</body>
+
+</html>
